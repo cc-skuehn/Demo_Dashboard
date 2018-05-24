@@ -1,3 +1,7 @@
+# Give it a try
+RawData/* linguist-vendored
+ProcessedData/* linguist-vendored
+
 # Basic .gitattributes for a R repo.
 
 # Source files
