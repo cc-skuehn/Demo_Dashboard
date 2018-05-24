@@ -47,7 +47,7 @@ source('Demo_Dashboard_tobeincluded.R')
 
 <!-- Comments in R Markdown are different from R -->
 
-<!-- Include other Markwodn files -->
+<!-- Include other Markdown files -->
 ```{r child = 'Demo_Dashboard_Overview.Rmd'}
 ```
 
@@ -74,6 +74,3 @@ source('Demo_Dashboard_tobeincluded.R')
 
 ```{r child = 'Demo_Dashboard_Forecasting.Rmd'}
 ```
-
-<!-- ```{r child = 'Demo_Dashboard_Predictions.Rmd'} -->
-<!-- ``` -->
