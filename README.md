@@ -29,3 +29,5 @@ In case this does not work out of the box, try changing the working directory to
 
 Visit me on XING
 https://www.xing.com/profile/Stefan_Kuehn46
+
+![alt text](https://raw.githubusercontent.com/cc-skuehn/Demo_Dashboard/master/Teaser_Demo_Dashboard.png)
