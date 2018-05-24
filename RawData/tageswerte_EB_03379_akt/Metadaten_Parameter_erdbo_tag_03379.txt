@@ -1,0 +1,11 @@
+Stations_ID;Von_Datum;Bis_Datum;Stationsname;Parameter;Parameterbeschreibung;Einheit;Datenquelle (Strukturversion=SV);Zusatz-Info;Besonderheiten;Literaturhinweis;eor;
+3379;19970708;20010331;München-Stadt;V_TE005M;Erdbodentemperatur in 5 cm Tiefe;°C;Erdbodentemperaturen an den drei Klimaterminen ( 07, 14, 21 MOZ, ab 01.01.1987 um 07:30,14:30,21:30 MEZ) ;arithm.Mittel;;;eor;
+3379;20010403;20180515;München-Stadt;V_TE005M;Erdbodentemperatur in 5 cm Tiefe;°C;Erdbodentemperaturen generiert aus dem stündlichen BOT-Teil des SYNOP-Bulletins (ab  01.04.2001). Tageswerte berechnet aus stündlichen Beobachtungen.;arithm.Mittel;;;eor;
+3379;19970708;20010331;München-Stadt;V_TE010M;Erdbodentemperatur in 10 cm Tiefe;°C;Erdbodentemperaturen an den drei Klimaterminen ( 07, 14, 21 MOZ, ab 01.01.1987 um 07:30,14:30,21:30 MEZ) ;arithm.Mittel;;;eor;
+3379;20010403;20180515;München-Stadt;V_TE010M;Erdbodentemperatur in 10 cm Tiefe;°C;Erdbodentemperaturen generiert aus dem stündlichen BOT-Teil des SYNOP-Bulletins (ab  01.04.2001). Tageswerte berechnet aus stündlichen Beobachtungen.;arithm.Mittel;;;eor;
+3379;19970708;20010331;München-Stadt;V_TE020M;Erdbodentemperatur in 20 cm Tiefe;°C;Erdbodentemperaturen an den drei Klimaterminen ( 07, 14, 21 MOZ, ab 01.01.1987 um 07:30,14:30,21:30 MEZ) ;arithm.Mittel;;;eor;
+3379;20010403;20180515;München-Stadt;V_TE020M;Erdbodentemperatur in 20 cm Tiefe;°C;Erdbodentemperaturen generiert aus dem stündlichen BOT-Teil des SYNOP-Bulletins (ab  01.04.2001). Tageswerte berechnet aus stündlichen Beobachtungen.;arithm.Mittel;;;eor;
+3379;19970708;20010331;München-Stadt;V_TE050M;Erdbodentemperatur in 50 cm Tiefe;°C;Erdbodentemperaturen an den drei Klimaterminen ( 07, 14, 21 MOZ, ab 01.01.1987 um 07:30,14:30,21:30 MEZ) ;arithm.Mittel;;;eor;
+3379;20010403;20180515;München-Stadt;V_TE050M;Erdbodentemperatur in 50 cm Tiefe;°C;Erdbodentemperaturen generiert aus dem stündlichen BOT-Teil des SYNOP-Bulletins (ab  01.04.2001). Tageswerte berechnet aus stündlichen Beobachtungen.;arithm.Mittel;;;eor;
+Legende: FT  = Folgetag; GZ = Gesetzliche Zeit
+generiert: 16.05.2018 --  Deutscher Wetterdienst  --

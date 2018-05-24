@@ -1,0 +1,20 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.02;19620501;19800626;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.02;19800627;19980430;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.05;19620501;19800626;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.05;19800627;20050228;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.05;20050215;20050228;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;3;-.05;20050301;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.1;19620501;19800626;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.1;19800627;20050228;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.1;20050215;20050228;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;3;-.1;20050301;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.2;19620501;19800626;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.2;19800627;20050228;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.2;20050215;20050228;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;3;-.2;20050301;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.5;19620501;19800626;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.5;19800627;20050228;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;2.5;-.5;20050215;20050228;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+1981;Hamburg-Neuwiedenthal;9.9;53.48;3;-.5;20050301;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+generiert: 16.05.2018 --  Deutscher Wetterdienst  --

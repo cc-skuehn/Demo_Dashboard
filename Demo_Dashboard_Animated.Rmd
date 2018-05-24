@@ -1,0 +1,42 @@
+Animated
+===================================== 
+
+```{r}
+Datum <- as.Date('2018-03-11')
+base_data <- data_munich[data_munich$DATUM==Datum,]
+monthly_reference <- calculate_reference(data_munich)
+#Datum <- min(base_data$DATUM)
+```
+
+
+Column {data-width=400}
+----------------------------
+
+### Munich - Last four weeks
+
+```{r}
+this_month <- months(Datum)
+dateseq <- seq(Datum-27,Datum,1)
+plot_data <- data_munich[is.element(data_munich$DATUM,dateseq),]
+plot_data$frame <- as.numeric(plot_data$DATUM)
+plotani <- ggplot()+
+  geom_point(data=plot_data,aes(x=DATUM,y=cm_05,color='cm_05',frame=frame))+
+  geom_point(data=plot_data,aes(x=DATUM,y=cm_10,frame=frame,color='cm_10'))+
+  geom_point(data=plot_data,aes(x=DATUM,y=cm_20,frame=frame,color='cm_20'))+
+  geom_point(data=plot_data,aes(x=DATUM,y=cm_50,frame=frame,color='cm_50'))+
+  geom_line(data=plot_data,aes(DATUM,cm_05,color='cm_05'),alpha=0.2)+ # alpha adds transparency to the plotted objects
+  geom_line(data=plot_data,aes(DATUM,cm_10,color='cm_10'),alpha=0.2)+
+  geom_line(data=plot_data,aes(DATUM,cm_20,color='cm_20'),alpha=0.2)+
+  geom_line(data=plot_data,aes(DATUM,cm_50,color='cm_50'),alpha=0.2)+
+  theme_bw()+ylab('Temperature')+
+  #scale_x_date(date_breaks='2 days')+
+  #theme(axis.text.x  = element_text(angle=30, vjust=0.5, hjust=1.0))+
+  scale_colour_manual(values=cbbPalette,name='Metrics')+
+  guides(color=FALSE)
+
+ggplotly(plotani) %>% animation_opts(frame = 200,redraw=FALSE,transition=0,easing = 'linear')
+
+# The full ggplot looks like a standard plot, ggplot ignores "frame" variable 
+# plotani
+
+```

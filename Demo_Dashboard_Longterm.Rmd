@@ -1,0 +1,18 @@
+Longterm
+===================================== 
+
+Column {data-width=400}
+----------------------------
+
+### Berlin - Last 1.5 years
+
+```{r}
+
+plot_data <- data_berlin
+plotberlin <- ggplot()+
+  geom_point(data=plot_data,aes(x=DATUM,y=cm_05,color=cm_05))+
+geom_line(data=plot_data,aes(DATUM,cm_05,color=cm_05),alpha=0.2)+
+theme_bw()+ylab('Temperature')
+renderPlot(plotberlin)
+
+```

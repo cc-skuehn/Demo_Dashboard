@@ -1,0 +1,151 @@
+Berlin
+===================================== 
+
+```{r}
+Datum <- as.Date('2018-03-11')
+base_data <- data_berlin[data_berlin$DATUM==Datum,]
+monthly_reference <- calculate_reference(data_berlin)
+```
+
+Column {data-width=80}
+----------------------------
+
+### Date
+
+```{r}
+valueBox(Datum,
+         color='blue')
+```
+
+### 5 cm 
+
+```{r}
+boxvalue <- base_data$cm_05[1]
+this_month <- months(Datum)
+gauge(boxvalue, min = -10, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```
+
+### 10 cm 
+
+```{r}
+boxvalue <- base_data$cm_10[1]
+this_month <- months(Datum)
+gauge(boxvalue, min = -10, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```
+
+### 20 cm 
+
+```{r}
+boxvalue <- base_data$cm_20[1]
+this_month <- months(Datum)
+gauge(boxvalue, min = -10, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```
+
+### 50 cm 
+
+```{r}
+boxvalue <- base_data$cm_50[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_50[monthly_reference$month==this_month]
+gauge(boxvalue, min = -10, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```
+
+Column {data-width=80}
+----------------------------
+
+### Reference
+
+```{r}
+valueBox(months(Datum),
+         color='blue')
+```
+
+### 5 cm 
+
+```{r}
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_05[monthly_reference$month==this_month]
+gauge(round(refvalue,digits=2), min = -10, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```
+
+### 10 cm 
+
+```{r}
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_10[monthly_reference$month==this_month]
+gauge(round(refvalue,digits=2), min = -10, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```
+
+### 20 cm 
+
+```{r}
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_20[monthly_reference$month==this_month]
+gauge(round(refvalue,digits=2), min = -10, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```
+
+### 50 cm 
+
+```{r}
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_50[monthly_reference$month==this_month]
+gauge(round(refvalue,digits=2), min = -10, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```
+
+Column {data-width=80}
+----------------------------
+
+### Delta
+
+```{r}
+valueBox('Difference',
+         color='blue')
+```
+
+### 5 cm 
+
+```{r}
+boxvalue <- base_data$cm_05[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_05[monthly_reference$month==this_month]
+gauge(round(boxvalue-refvalue,digits=2), min = -20, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```
+
+### 10 cm 
+
+```{r}
+boxvalue <- base_data$cm_10[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_10[monthly_reference$month==this_month]
+gauge(round(boxvalue-refvalue,digits=2), min = -10, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```
+
+### 20 cm 
+
+```{r}
+boxvalue <- base_data$cm_20[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_20[monthly_reference$month==this_month]
+gauge(round(boxvalue-refvalue,digits=2), min = -10, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```
+
+### 50 cm 
+
+```{r}
+boxvalue <- base_data$cm_50[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_50[monthly_reference$month==this_month]
+gauge(round(boxvalue-refvalue,digits=2), min = -10, max = 40, gaugeSectors(
+  success = c(20, 40), warning = c(1, 19), danger = c(-10, 0)))
+```

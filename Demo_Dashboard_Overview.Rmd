@@ -1,0 +1,42 @@
+Data {data-orientation=rows}
+===================================== 
+
+Row {data-height=1000}
+----------------------------
+
+### Demo Dataset
+
+```{r echo=FALSE,eval=TRUE} 
+# echo=FALSE is the defaullt, no code is printed
+# eval=TRUE is the default, code chunk is evaluated/executed
+library(knitr)
+kable(head(data_hamburg),row.names = TRUE)
+kable(tail(data_hamburg))
+```
+
+### Demo Dataset Summary
+
+```{r} 
+library(knitr)
+kable(summary(data_hamburg))
+str(data_hamburg)
+```
+
+Row {data-height=400}
+----------------------------
+
+### Code
+
+```{r echo=TRUE,eval=FALSE}
+library(knitr)
+kable(head(data_hamburg),row.names = TRUE)
+kable(tail(data_hamburg))
+```
+
+### Code
+
+```{r echo=TRUE,eval=FALSE}
+library(knitr)
+kable(summary(data_hamburg))
+str(data_hamburg)
+```

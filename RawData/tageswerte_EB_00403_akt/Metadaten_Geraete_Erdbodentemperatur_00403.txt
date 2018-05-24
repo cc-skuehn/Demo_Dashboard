@@ -1,0 +1,17 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+403;Berlin-Dahlem (FU);13.3;52.46;51;-.02;19500101;19970711;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+403;Berlin-Dahlem (FU);13.3;52.45;51;-.02;19970712;19980930;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+403;Berlin-Dahlem (FU);13.3;52.45;51;-.02;19981001;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+403;Berlin-Dahlem (FU);13.3;52.46;51;-.05;19500101;19970711;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+403;Berlin-Dahlem (FU);13.3;52.45;51;-.05;19970712;19980930;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+403;Berlin-Dahlem (FU);13.3;52.45;51;-.05;19981001;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+403;Berlin-Dahlem (FU);13.3;52.46;51;-.1;19500101;19970711;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+403;Berlin-Dahlem (FU);13.3;52.45;51;-.1;19970712;19980930;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+403;Berlin-Dahlem (FU);13.3;52.45;51;-.1;19981001;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+403;Berlin-Dahlem (FU);13.3;52.46;51;-.2;19500101;19970711;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+403;Berlin-Dahlem (FU);13.3;52.45;51;-.2;19970712;19980930;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+403;Berlin-Dahlem (FU);13.3;52.45;51;-.2;19981001;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+403;Berlin-Dahlem (FU);13.3;52.46;51;-.5;19500101;19970711;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+403;Berlin-Dahlem (FU);13.3;52.45;51;-.5;19970712;19980930;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+403;Berlin-Dahlem (FU);13.3;52.45;51;-.5;19981001;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+generiert: 16.05.2018 --  Deutscher Wetterdienst  --

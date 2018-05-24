@@ -1,0 +1,32 @@
+Forecasting
+===================================== 
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+```{r}
+sliderInput("nofdays", label = "Days to forecast:",
+            min = 7, max = 365, value = 28, step = 1)
+
+```
+
+Column 
+----------------------------
+
+### Berlin - Summer Forecast {data-height=600}
+
+```{r}
+renderPlotly({
+  plot_data <- data_berlin
+  st <- min(plot_data$DATUM)
+  en <- max(plot_data$DATUM)
+  ll <- seq(st, en, by='1 day')
+  forecast_data <- plot_data[,c('DATUM','cm_05')]
+  names(forecast_data) <- c('ds','y')
+  pro1 <- prophet(forecast_data,yearly.seasonality = TRUE,daily.seasonality = FALSE)
+  future_data <- make_future_dataframe(pro1, periods = input$nofdays)
+  future_pred <- predict(pro1,future_data)
+  plot(pro1,future_pred)
+  #prophet_plot_components(pro1,future_pred) # Inspect model componentes
+})
+```

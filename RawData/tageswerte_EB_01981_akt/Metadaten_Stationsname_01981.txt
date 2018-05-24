@@ -1,0 +1,2 @@
+Stations_ID;Stationsname;Von_Datum;Bis_Datum
+  1981;Hamburg-Neuwiedenthal                   ;19430301;

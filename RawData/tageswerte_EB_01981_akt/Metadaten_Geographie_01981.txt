@@ -1,0 +1,5 @@
+Stations_id;Stationshoehe;Geogr.Breite;Geogr.Laenge;von_datum;bis_datum;Stationsname
+  1981;    1.00; 53.5085;  9.8727;19430301;19620430;Hamburg-Neuwiedenthal
+  1981;    2.50; 53.4774;  9.8971;19620501;19800626;Hamburg-Neuwiedenthal
+  1981;    2.50; 53.4779;  9.8974;19800627;20050228;Hamburg-Neuwiedenthal
+  1981;    3.00; 53.4777;  9.8957;20050301;        ;Hamburg-Neuwiedenthal

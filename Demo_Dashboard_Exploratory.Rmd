@@ -1,0 +1,58 @@
+Explore
+===================================== 
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+Ground level temperatures from three different German cities between 5-50 cm above the ground. In addition, you can adjust the smoothed curve and the scaling of the y-axis. 
+
+```{r}
+selectInput("dataset", label = "City:",
+            choices = c('Hamburg','Berlin','Munich'), selected = 'Hamburg')
+
+selectInput("metric", label = "Metric:",
+            choices = c('cm_05','cm_10','cm_20','cm_50'), selected = 'cm_05')
+
+sliderInput("smoothing", label = "Smoothing:",
+            min = 0.05, max = 1.0, value = 0.2, step = 0.05)
+
+checkboxInput("yscaling", label = "Y-Axis Scale Global?",
+              value = FALSE)
+```
+
+Global (=checking the box) means that the min and max y values on the axis are taken from all three cities, i.e. the y-axis has the same scale for all metrics and all cities.
+
+Column
+-----------------------------------------------------------------------
+
+### Ground Temperature
+
+```{r}
+renderPlot({
+
+if (input$dataset=='Hamburg') this_df <- data_hamburg
+if (input$dataset=='Berlin') this_df <- data_berlin
+if (input$dataset=='Munich') this_df <- data_munich
+
+global_min_temp <- min(min(data_hamburg[,-c(1:2)]),min(data_berlin[,-c(1:2)]),min(data_munich[,-c(1:2)]))
+global_max_temp <- max(max(data_hamburg[,-c(1:2)]),max(data_berlin[,-c(1:2)]),max(data_munich[,-c(1:2)]))
+min_temp <- min(this_df[,-c(1:2)])
+max_temp <- max(this_df[,-c(1:2)])
+global_ybreaks = seq(floor(global_min_temp-1),floor(global_max_temp+1))
+ybreaks = seq(floor(min_temp-1),floor(max_temp+1))
+if (input$yscaling==TRUE) {
+  min_temp = global_min_temp 
+  max_temp = global_max_temp
+  ybreaks = global_ybreaks
+}
+ggplot() + geom_point(data=this_df,aes(x=DATUM,y=this_df[,input$metric]))+
+  geom_smooth(data=this_df,aes(x=DATUM,y=this_df[,input$metric]),span=input$smoothing)+
+  theme_bw()+
+  ylab(input$metric)+
+#  scale_y_continuous(breaks=global_ybreaks,limits = c(global_min_temp-3,global_max_temp+3))+
+  scale_y_continuous(breaks=ybreaks,limits = c(min_temp-1,max_temp+1))+
+  scale_x_date(date_breaks='2 weeks')+
+  theme(axis.text.x  = element_text(angle=70, vjust=0.5, hjust=1.0))
+
+})
+```

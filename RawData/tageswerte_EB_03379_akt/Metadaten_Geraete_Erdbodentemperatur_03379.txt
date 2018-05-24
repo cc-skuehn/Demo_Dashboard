@@ -1,0 +1,10 @@
+Stations_ID;Stationsname;Geo. Laenge [Grad];Geo. Breite [Grad];Stationshoehe [m];Geberhoehe ueber Grund [m];Von_Datum;Bis_Datum;Geraetetyp Name;Messverfahren;eor;
+3379;München-Stadt;11.54;48.16;515.2;-.05;19970708;20061016;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+3379;München-Stadt;11.54;48.16;515.2;-.05;20061205;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+3379;München-Stadt;11.54;48.16;515.2;-.1;19970708;20061016;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+3379;München-Stadt;11.54;48.16;515.2;-.1;20061205;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+3379;München-Stadt;11.54;48.16;515.2;-.2;19970708;20061016;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+3379;München-Stadt;11.54;48.16;515.2;-.2;20061205;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+3379;München-Stadt;11.54;48.16;515.2;-.5;19970708;;PT 100 (Erdboden);Temperaturmessung, elektr.;eor;
+3379;München-Stadt;11.54;48.16;515.2;-.5;19970708;20061016;Erdbodenthermometer;Temperaturmessung, konv.;eor;
+generiert: 16.05.2018 --  Deutscher Wetterdienst  --

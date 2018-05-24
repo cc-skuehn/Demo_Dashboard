@@ -1,0 +1,31 @@
+Campaign
+===================================== 
+
+Column {data-width=400}
+----------------------------
+
+### Hamburg - Winter and Spring
+
+```{r}
+
+dateseq <- seq(from=as.Date('2016-12-01'),to=as.Date('2017-05-31'),1)
+plot_data <- data_hamburg[is.element(data_hamburg$DATUM,dateseq),]
+plot_data$index <- 1:182
+plotcampaign <- ggplot()+
+  geom_point(data=plot_data,aes(x=DATUM,y=cm_05,color=cm_05))+
+geom_line(data=plot_data,aes(DATUM,cm_05,color=cm_05),alpha=0.2)+
+theme_bw()+ylab('Temperature')
+renderPlot(plotcampaign)
+
+```
+
+Column {data-width=400}
+----------------------------
+
+### Hamburg - Impact of Spring on Temperature
+
+```{r}
+c1 <- CausalImpact::CausalImpact(data=plot_data[,c('cm_05','index')], pre.period = c(1,91),post.period = c(92,182))
+renderPlot(plot(c1))
+#summary(c1)
+```

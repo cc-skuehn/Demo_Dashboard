@@ -1,0 +1,212 @@
+Munich
+===================================== 
+
+```{r}
+Datum <- as.Date('2018-03-11')
+base_data <- data_munich[data_munich$DATUM==Datum,]
+monthly_reference <- calculate_reference(data_munich)
+```
+
+Column {data-width=80}
+----------------------------
+
+### Date
+
+```{r}
+valueBox(Datum,
+         color='blue')
+```
+
+### 5 cm 
+
+```{r}
+boxvalue <- base_data$cm_05[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_05[monthly_reference$month==this_month]
+valueBox(round(boxvalue,digits=2),
+         icon = "fa-globe", 
+         color=ifelse(boxvalue<refvalue,"danger","success"))
+```
+
+### 10 cm 
+
+```{r}
+boxvalue <- base_data$cm_10[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_10[monthly_reference$month==this_month]
+valueBox(round(boxvalue,digits=2),
+         icon = "fa-globe", 
+         color=ifelse(boxvalue<refvalue,"danger","success"))
+```
+
+### 20 cm 
+
+```{r}
+boxvalue <- base_data$cm_20[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_20[monthly_reference$month==this_month]
+valueBox(round(boxvalue,digits=2),
+         icon = "fa-globe", 
+         color=ifelse(boxvalue<refvalue,"danger","success"))
+```
+
+### 50 cm 
+
+```{r}
+boxvalue <- base_data$cm_50[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_50[monthly_reference$month==this_month]
+valueBox(round(boxvalue,digits=2),
+         icon = "fa-globe", 
+         color=ifelse(boxvalue<refvalue,"danger","success"))
+```
+
+Column {data-width=80}
+----------------------------
+
+### Reference
+
+```{r}
+valueBox(months(Datum),
+         color='blue')
+```
+
+### 5 cm 
+
+```{r}
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_05[monthly_reference$month==this_month]
+valueBox(round(refvalue,digits=2),
+         icon = "fa-heartbeat")
+```
+
+### 10 cm 
+
+```{r}
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_10[monthly_reference$month==this_month]
+valueBox(round(refvalue,digits=2),
+         icon = "fa-heartbeat")
+```
+
+### 20 cm 
+
+```{r}
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_20[monthly_reference$month==this_month]
+valueBox(round(refvalue,digits=2),
+         icon = "fa-heartbeat")
+```
+
+### 50 cm 
+
+```{r}
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_50[monthly_reference$month==this_month]
+valueBox(round(refvalue,digits=2),
+         icon = "fa-heartbeat")
+```
+
+Column {data-width=80}
+----------------------------
+
+### Delta
+
+```{r}
+valueBox('Difference',
+         color='blue')
+```
+
+### 5 cm 
+
+```{r}
+boxvalue <- base_data$cm_05[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_05[monthly_reference$month==this_month]
+valueBox(round(boxvalue-refvalue,digits=2),
+         icon = "fa-calculator")
+```
+
+### 10 cm 
+
+```{r}
+boxvalue <- base_data$cm_10[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_10[monthly_reference$month==this_month]
+valueBox(round(boxvalue-refvalue,digits=2),
+         icon = "fa-calculator")
+```
+
+### 20 cm 
+
+```{r}
+boxvalue <- base_data$cm_20[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_20[monthly_reference$month==this_month]
+valueBox(round(boxvalue-refvalue,digits=2),
+         icon = "fa-calculator")
+```
+
+### 50 cm 
+
+```{r}
+boxvalue <- base_data$cm_50[1]
+this_month <- months(Datum)
+refvalue <- monthly_reference$cm_50[monthly_reference$month==this_month]
+valueBox(round(boxvalue-refvalue,digits=2),
+         icon = "fa-calculator")
+```
+
+Column {data-width=400}
+----------------------------
+
+### Last two weeks {data-height=600}
+
+```{r}
+this_month <- months(Datum)
+dateseq <- seq(Datum-13,Datum,1)
+refvalues <- monthly_reference[monthly_reference$month==this_month,]
+plot_data01 <- data_munich[is.element(data_munich$DATUM,dateseq),]
+renderPlotly(
+ggplot()+
+  geom_point(data=plot_data01,aes(DATUM,cm_05,color='cm_05'))+
+  geom_point(data=plot_data01,aes(DATUM,cm_10,color='cm_10'))+
+  geom_point(data=plot_data01,aes(DATUM,cm_20,color='cm_15'))+
+  geom_point(data=plot_data01,aes(DATUM,cm_50,color='cm_20'))+
+  geom_line(data=plot_data01,aes(DATUM,cm_05,color='cm_05'))+
+  geom_line(data=plot_data01,aes(DATUM,cm_10,color='cm_10'))+
+  geom_line(data=plot_data01,aes(DATUM,cm_20,color='cm_15'))+
+  geom_line(data=plot_data01,aes(DATUM,cm_50,color='cm_20'))+
+  theme_bw()+ylab('Temperature')+
+  scale_x_date(date_breaks='2 days')+
+  #theme(axis.text.x  = element_text(angle=30, vjust=0.5, hjust=1.0))+ # rotates x axis text/labels
+  scale_colour_manual(values=cbbPalette,name='Metrics') # uses pred-defined custom colour palette
+)
+```
+
+<!-- INFO: If you are using "reactive" components make sure that variable names (defined within) are unique -->
+<!-- INFO: Try out the same plot as above with just a different variable name: plot_data instead of plot_data01 -->
+<!-- INFO: This variable name is re-used later for forecasting, this overwrite the data -->
+<!-- INFO: This variable name is re-used also for campaign, but defined outside of the reactive renderPlot function -->
+
+<!-- ```{r} -->
+<!-- this_month <- months(Datum) -->
+<!-- dateseq <- seq(Datum-13,Datum,1) -->
+<!-- refvalues <- monthly_reference[monthly_reference$month==this_month,] -->
+<!-- plot_data <- data_munich[is.element(data_munich$DATUM,dateseq),] -->
+<!-- renderPlotly( -->
+<!-- ggplot()+ -->
+<!--   geom_point(data=plot_data,aes(DATUM,cm_05,color='cm_05'))+ -->
+<!--   geom_point(data=plot_data,aes(DATUM,cm_10,color='cm_10'))+ -->
+<!--   geom_point(data=plot_data,aes(DATUM,cm_20,color='cm_20'))+ -->
+<!--   geom_point(data=plot_data,aes(DATUM,cm_50,color='cm_50'))+ -->
+<!--   geom_line(data=plot_data,aes(DATUM,cm_05,color='cm_05'))+ -->
+<!--   geom_line(data=plot_data,aes(DATUM,cm_10,color='cm_10'))+ -->
+<!--   geom_line(data=plot_data,aes(DATUM,cm_20,color='cm_20'))+ -->
+<!--   geom_line(data=plot_data,aes(DATUM,cm_50,color='cm_50'))+ -->
+<!--   theme_bw()+ylab('Temperature')+ -->
+<!--   scale_x_date(date_breaks='2 days')+ -->
+<!--   #theme(axis.text.x  = element_text(angle=30, vjust=0.5, hjust=1.0))+ -->
+<!--   scale_colour_manual(values=cbbPalette,name='Metrics') -->
+<!-- ) -->
+<!-- ``` -->

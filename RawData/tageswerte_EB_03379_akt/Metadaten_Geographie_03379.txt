@@ -1,0 +1,3 @@
+Stations_id;Stationshoehe;Geogr.Breite;Geogr.Laenge;von_datum;bis_datum;Stationsname
+  3379;  535.00; 48.1363; 11.5508;19540528;19970707;München-Stadt
+  3379;  515.20; 48.1631; 11.5429;19970708;        ;München-Stadt

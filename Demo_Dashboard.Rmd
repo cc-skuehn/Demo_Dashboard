@@ -1,0 +1,79 @@
+---
+title: "DD - Demo Dashboard"
+runtime: shiny
+output: 
+  flexdashboard::flex_dashboard:
+#    orientation: rows
+    orientation: columns
+    vertical_layout: fill
+#    vertical_layout: scroll
+    
+---
+
+```{r global, include=FALSE}
+# Hint: Load libraries, helper functions, data in "global" chunk, speeds up everything
+
+############
+## Libraries
+############
+
+# Plotting
+library(ggplot2)
+library(flexdashboard)
+library(shiny)
+library(plotly)
+#library(scales)
+
+# Forecasting, Causal Inference
+library(prophet)
+library(CausalImpact)
+
+# Markdown
+library(knitr)
+library(markdown)
+
+# Color palettes - in case
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+# The same palette with black first
+cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+# Load helper functions and data
+source('Demo_Dashboard_tobeincluded.R')
+
+# Set global parameters
+# I typically use parametrized script that e.g. allow enabling/disabling of "costly" features like database queries or interactive plotting
+# This enables faster development
+```
+
+<!-- Comments in R Markdown are different from R -->
+
+<!-- Include other Markwodn files -->
+```{r child = 'Demo_Dashboard_Overview.Rmd'}
+```
+
+```{r child = 'Demo_Dashboard_Hamburg.Rmd'}
+```
+
+```{r child = 'Demo_Dashboard_Berlin.Rmd'}
+```
+
+```{r child = 'Demo_Dashboard_Munich.Rmd'}
+```
+
+```{r child = 'Demo_Dashboard_Exploratory.Rmd'}
+```
+
+```{r child = 'Demo_Dashboard_Animated.Rmd'}
+```
+
+```{r child = 'Demo_Dashboard_Campaigns.Rmd'}
+```
+
+```{r child = 'Demo_Dashboard_Longterm.Rmd'}
+```
+
+```{r child = 'Demo_Dashboard_Forecasting.Rmd'}
+```
+
+<!-- ```{r child = 'Demo_Dashboard_Predictions.Rmd'} -->
+<!-- ``` -->
