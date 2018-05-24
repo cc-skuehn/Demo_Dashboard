@@ -27,7 +27,7 @@ In case this does not work out of the box, try changing the working directory to
 
 ### Data
 
-The raw data was download on 2018-05-16 from the Climate Data Center (CDC, by Deutsche Wetterdienst DWD) 
+The raw data was download on 2018-05-16 from the Climate Data Center (CDC, provided by Deutscher Wetterdienst (DWD))
 https://www.dwd.de/EN/ourservices/cdcftp/cdcftp.html
 
 ### Author / Contact / Questions
