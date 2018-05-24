@@ -25,6 +25,11 @@ After installing the packages and once you have downloaded the source files from
 
 In case this does not work out of the box, try changing the working directory to the file's directory first: Session -> Set Working Directory -> To Source File Location
 
+### Data
+
+The raw data was download on 2018-05-16 from the Climate Data Center (CDC, by Deutsche Wetterdienst DWD) 
+https://www.dwd.de/EN/ourservices/cdcftp/cdcftp.html
+
 ### Author / Contact / Questions
 
 Visit me on XING
