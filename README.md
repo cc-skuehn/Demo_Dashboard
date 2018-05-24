@@ -21,7 +21,9 @@ Some of these packages will install further packages.
 
 ### Starting the Dashboard
 
-After installing the packages and once you have downloaded the source files from this repository (or cloned/forked the repository, whatever you prefer, but don't forget the Data folders), open the file "Demo_Dashboard.Rmd" with RStudio, change the working directory to the file's directory (Session -> Set Working Directory -> To Source File Location) and click on "Run Document".
+After installing the packages and once you have downloaded the source files from this repository (or cloned/forked the repository, whatever you prefer, but don't forget the Data folders), open the file "Demo_Dashboard.Rmd" with RStudio and click on "Run Document".
+
+In case this does not work out of the box, try changing the working directory to the file's directory first: Session -> Set Working Directory -> To Source File Location
 
 ### Author / Contact / Questions
 
