@@ -20,10 +20,10 @@ dateseq <- seq(Datum-27,Datum,1)
 plot_data <- data_munich[is.element(data_munich$DATUM,dateseq),]
 plot_data$frame <- as.numeric(plot_data$DATUM)
 plotani <- ggplot()+
-  geom_point(data=plot_data,aes(x=DATUM,y=cm_05,color='cm_05',frame=frame))+
-  geom_point(data=plot_data,aes(x=DATUM,y=cm_10,frame=frame,color='cm_10'))+
-  geom_point(data=plot_data,aes(x=DATUM,y=cm_20,frame=frame,color='cm_20'))+
-  geom_point(data=plot_data,aes(x=DATUM,y=cm_50,frame=frame,color='cm_50'))+
+  geom_point(data=plot_data,aes(x=DATUM,y=cm_05,frame=frame,color='cm_05',size=cm_05))+
+  geom_point(data=plot_data,aes(x=DATUM,y=cm_10,frame=frame,color='cm_10',size=cm_10))+
+  geom_point(data=plot_data,aes(x=DATUM,y=cm_20,frame=frame,color='cm_20',size=cm_20))+
+  geom_point(data=plot_data,aes(x=DATUM,y=cm_50,frame=frame,color='cm_50',size=cm_50))+
   geom_line(data=plot_data,aes(DATUM,cm_05,color='cm_05'),alpha=0.2)+ # alpha adds transparency to the plotted objects
   geom_line(data=plot_data,aes(DATUM,cm_10,color='cm_10'),alpha=0.2)+
   geom_line(data=plot_data,aes(DATUM,cm_20,color='cm_20'),alpha=0.2)+

@@ -1,3 +1,29 @@
+
+############
+## Libraries
+############
+
+# Plotting
+library(ggplot2)
+library(flexdashboard)
+library(shiny)
+library(plotly)
+#library(scales)
+
+# Forecasting, Causal Inference
+library(prophet)
+library(CausalImpact)
+
+# Markdown
+library(knitr)
+library(markdown)
+
+# Color palettes - in case
+cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+# The same palette with black first
+cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+
 # Read data
 
 colmodes <- c('character','Date',rep('numeric',4)) 

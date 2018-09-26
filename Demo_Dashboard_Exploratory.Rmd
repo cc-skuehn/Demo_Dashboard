@@ -13,6 +13,9 @@ selectInput("dataset", label = "City:",
 selectInput("metric", label = "Metric:",
             choices = c('cm_05','cm_10','cm_20','cm_50'), selected = 'cm_05')
 
+selectInput("pointsize", label = "Size:",
+            choices = c('1','2','5','10'), selected = '2')
+
 sliderInput("smoothing", label = "Smoothing:",
             min = 0.05, max = 1.0, value = 0.2, step = 0.05)
 
@@ -45,13 +48,18 @@ if (input$yscaling==TRUE) {
   max_temp = global_max_temp
   ybreaks = global_ybreaks
 }
-ggplot() + geom_point(data=this_df,aes(x=DATUM,y=this_df[,input$metric]))+
+
+#pointsize=1
+pointsize <- as.numeric(input$pointsize)
+#ggplot() + geom_point(data=this_df,aes(x=DATUM,y=this_df[,input$metric]),size=pointsize)+
+ggplot() + geom_point(data=this_df,aes(x=DATUM,y=this_df[,input$metric],color=this_df[,input$metric]),size=pointsize)+
   geom_smooth(data=this_df,aes(x=DATUM,y=this_df[,input$metric]),span=input$smoothing)+
   theme_bw()+
   ylab(input$metric)+
 #  scale_y_continuous(breaks=global_ybreaks,limits = c(global_min_temp-3,global_max_temp+3))+
   scale_y_continuous(breaks=ybreaks,limits = c(min_temp-1,max_temp+1))+
   scale_x_date(date_breaks='2 weeks')+
+  scale_colour_continuous(low='blue',high='red',name='Temp\n[°C]')+
   theme(axis.text.x  = element_text(angle=70, vjust=0.5, hjust=1.0))
 
 })
