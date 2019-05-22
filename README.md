@@ -4,7 +4,7 @@ This is an interactive Demo Dashboard in R using flexdashboard, shiny, plotly an
 
 ## Usage
 
-The Dashboard comes as a set of .Rmd or RMarkdown files plus some standard R scripts. In order to run it you need to have certain packages and most probably it is a good idea to have RStudio and R version 3.4.x installed 
+The Dashboard comes as a set of .Rmd or RMarkdown files plus some standard R scripts. In order to run it you need to have downloaded certain packages and most probably it is a good idea to have RStudio and R version 3.4.x installed 
 
 ### Packages
 
@@ -17,7 +17,7 @@ The Dashboard comes as a set of .Rmd or RMarkdown files plus some standard R scr
 * CausalImpact
 * prophet
 
-Some of these packages will install further packages.
+Some of these packages will have additional requirements, i.e. install additional packages.
 
 ### Starting the Dashboard
 
@@ -27,7 +27,7 @@ In case this does not work out of the box, try changing the working directory to
 
 ### Data
 
-The raw data was download on 2018-05-16 from the Climate Data Center (CDC, provided by Deutscher Wetterdienst (DWD))
+The raw data was downloaded on 2018-05-16 from the Climate Data Center (CDC, provided by Deutscher Wetterdienst (DWD))
 https://www.dwd.de/EN/ourservices/cdcftp/cdcftp.html
 
 ### Author / Contact / Questions
