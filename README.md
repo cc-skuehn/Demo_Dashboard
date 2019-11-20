@@ -32,7 +32,8 @@ https://www.dwd.de/EN/ourservices/cdcftp/cdcftp.html
 
 ### Author / Contact / Questions
 
-Visit me on XING
+Visit me on LinkedIn or XING
+https://de.linkedin.com/in/stefan-k%C3%BChn-020a34119
 https://www.xing.com/profile/Stefan_Kuehn46
 
 ![alt text](https://raw.githubusercontent.com/cc-skuehn/Demo_Dashboard/master/Teaser_Demo_Dashboard.png)
